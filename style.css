@@ -130,7 +130,7 @@ a:hover {
   width: auto;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 9000px) {
   .nav-container { 
     text-align: center;
     gap: var(--gap);
@@ -148,7 +148,8 @@ a:hover {
   .menu {
     margin: 0;
     gap: var(--gap);
-    display: none;
+    flex-wrap: wrap;
+    
   }
 
   .menu-list {
