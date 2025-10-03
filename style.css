@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+/* Variables CSS */
+:root {
+  --primary-color: #152d71;
+  --font-color: #333;
+  --font-color-secondary: #e58f16;
+  --background-color: whitesmoke;
+  --background-color-secondary: #f9f9f9;
+  --font-size-sm: 16px;
+  --font-size-alt: 2rem;
+  --padding : 1rem;
+  --padding-mid : 2rem;
+  --margin : 1rem;
+  --margin-mid : 2rem;
+  --gap: 1rem;
+  --gap-mid: 2rem;
+}
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos Globales */
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+/* =========================
+   HEADER / NAVEGACIÓN -- Lo que me costo esta parte
+============================= */ 
+header {
+  width: 100%;
+  background-color: var(--background-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  gap: var(--gap);
+  border-bottom: 2px solid #e0e0e0;
+  padding: var(--padding); 
+  background-color: var(--background-color);
+}
+
+.logo {
+  height: 130px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  margin-left: var(--margin-mid);
+}
+
+h1 {
+  color: var(--primary-color);
+  font-size: 2.8rem;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  margin-left: 6rem;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-mid);
+  margin-right: var(--margin-mid);
+  flex-wrap: wrap;
+}
+
+.menu-item a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.iconos {
+  height: 40px;
+  width: auto;
+  margin-right: var(--margin);
+}
+
+.menu-list {
+  display: flex;
+  padding: var(--padding);
+  justify-content: center;
+  gap: 5rem;
+  font-weight: 600;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.03);
+  border-bottom: 2px solid #e0e0e0;
+}
+
+a:hover {
+  color: var(--font-color-secondary);
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+/* =========================
+   Sección Hero
+============================= */
+.hero {
+  min-height: 80vh;
+  background: url("./assets/bacgrounds/Background.png") no-repeat center
+    center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--primary-color);
+  width: auto;
+}
+
+@media (max-width: 900px) {
+  .nav-container { 
+    text-align: center;
+    gap: var(--gap);
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-left: 0;
+  }
+
+  .menu {
+    margin: 0;
+    gap: var(--gap);
+    display: none;
+  }
+
+  .menu-list {
+    gap: var(--gap);
+  }
+}
+
+
+
+.hero-content {
+  text-align: center;
+  padding: 0 var(--padding);
+  
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: var(--margin-mid);
+  font-weight: 500;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--background-color-secondary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+    /* SECCIÓN ABOUT (SOBRE NOSOTROS)*/
+
+.About {
+  padding: 3rem var(--padding-mid);
+  text-align: center;
+  background-color: var(--background-color-secondary);
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.About p {
+  font-size: 1.1rem;
+  color: var(--font-color);
+
+  margin: 0 auto;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* SECCIÓN OFERTAS (PRODUCTOS)*/
+.Ofertas {
+  padding: 3rem var(--padding);
+  text-align: center;
+  width: 100%;
+  padding-bottom: 3rem;
+}
+
+#oferta {
+  font-size: var(--font-size-alt);
+  color: var(--font-color-secondary);
+  margin-top: 0.5rem;
+}
+
+.oferta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--gap);
+  padding-top: var(--padding);
+  padding-left: var(--padding);
+}
+
+.product {
+  background-color: var(--background-color-secondary);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.product:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product p {
+  font-size: 1rem;
+  color: var(--font-color);
+  margin: 0.5rem 0;
+  font-weight: 600;
+}
+
+.product span {
+  color: var(--font-color-secondary);
+  font-weight: 700;
+  display: inline-block;
+}
+
+/* FOOTER */
+.footer {
+  padding: var(--padding-mid);
+  background-color: var(--background-color);
+}
+
+/* Sección Contacto */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  text-align: center;
+  margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+}
+
+input,
+textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(21, 45, 113, 0.5);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--background-color-secondary);
+  padding: 0.75rem;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* Redes Sociales */
+nav p {
+  text-align: center;
+  font-size: 1.3rem;
+  color: var(--font-color);
+  margin-top: var(--margin);
+}
+#social {
+  display: flex;
+  justify-content: center;
+  gap: var(--gap-mid);
+  align-items: center;
+  margin-top: var(--margin);
+}
+
+@media (max-width: 700px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: var(--padding) 0;
+  }
+  .logo {
+    height: 60px;
+    margin-left: 0;
+  }
+  h1 {
+    font-size: 1.3rem;
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+  .menu-list {
+    flex-direction: column;
+    gap: var(--gap);
+    padding: 0.5rem 0;
+  }
+  .hero {
+    min-height: 40vh;
+    padding: var(--padding) .5rem;
+  }
+  .hero-content {
+    padding: 0;
+  }
+  .About, .Ofertas {
+    padding: 1.5rem 0.5rem;
+  }
+  .oferta-grid {
+    grid-template-columns: 1fr;
+    padding-left: 0;
+  }
+  .footer {
+    padding: var(--padding) 0.5rem;
+  }
+  form {
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+  #social {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}
+
