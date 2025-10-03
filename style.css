@@ -44,7 +44,9 @@ a {
 header {
   width: 100%;
   background-color: var(--background-color);
-  z-index: 100; 
+  z-index: 100;
+  position: sticky; 
+  top: 0;
 }
 
 .nav-container {
@@ -130,7 +132,13 @@ a:hover {
   width: auto;
 }
 
-@media (max-width: 9000px) {
+@media (max-width: 900px) {
+
+  header { 
+    position: static;
+    
+  }
+
   .nav-container { 
     text-align: center;
     gap: var(--gap);
@@ -141,7 +149,7 @@ a:hover {
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-left: 0;
   }
 
@@ -308,28 +316,34 @@ nav p {
 }
 
 @media (max-width: 700px) {
+
+  header { 
+    position: static;
+    
+  }
   .nav-container {
     flex-direction: column;
-    gap: 0.5rem;
-    padding: var(--padding) 0;
+    gap: 0.3rem;
+    padding: 0.3 0;
+    
   }
   .logo {
     height: 60px;
     margin-left: 0;
   }
   h1 {
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin-left: 0;
-    margin-top: 0.5rem;
+    margin-top: 0.2rem;
   }
   .menu-list {
     flex-direction: column;
-    gap: var(--gap);
-    padding: 0.5rem 0;
+    gap: 0.5rem;
+    padding: 0.3rem 0;
   }
   .hero {
     min-height: 40vh;
-    padding: var(--padding) .5rem;
+    padding: var(--padding) .2rem;
   }
   .hero-content {
     padding: 0;
